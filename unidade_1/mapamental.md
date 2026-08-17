@@ -129,3 +129,6 @@ O BABOK® também é mapeado para o framework SFIA para auxiliar na definição 
 2. Habilidades Relacionadas: Teste de aceitação do usuário (BPTS), Gerenciamento de stakeholders (RLMT), Gerenciamento de benefícios (BENM).
 3. Habilidades para Gestores e Líderes: Gerenciamento de desempenho (PEMT) e Desenvolvimento profissional (PDSV).
 
+## Mapa mental 
+
+<img width="4423" height="10537" alt="NotebookLM Mind Map (1)" src="https://github.com/user-attachments/assets/26211bdb-8460-49ab-a406-911672fd4fda" />
