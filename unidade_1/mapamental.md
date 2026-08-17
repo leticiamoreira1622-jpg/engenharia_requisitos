@@ -1,4 +1,4 @@
-##Resumo - (mapa mental não funciona para mim)##
+## Resumo - (mapa mental não funciona para mim) ##
 
 O A Guide to the Business Analysis Body of Knowledge (BABOK® Guide), publicado pelo International Institute of Business Analysis (IIBA), é o padrão global reconhecido para a prática de análise de negócios. Atualmente em sua versão 3, o guia fornece um framework abrangente que descreve as habilidades, tarefas, técnicas e competências necessárias para que profissionais entreguem valor e resultados de negócio bem-sucedidos.
 
