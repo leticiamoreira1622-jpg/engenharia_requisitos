@@ -8,4 +8,4 @@ Requisitos não funcionais - definição de níveis de prioridade diferentes par
 ### Explique, em poucas palavras, por que é importante levantar os requisitos antes de desenvolver um software.
 A importância de levantamento de requisitos é a clarificação do que o cliente almeja, evitando o retrabalho posterior e corte de gastos. 
 ### Nomes 
-Daniel de Medeiros, Lucas Alves e Letícia Moreira de Oliveira.
+Daniel de Medeiros, Lucas Alves, João Miguel Andrade da Costa e Letícia Moreira de Oliveira.
