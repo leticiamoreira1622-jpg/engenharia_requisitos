@@ -161,10 +161,11 @@ Conexão Pedagógica: Com o mapa traçado e a governança definida, você está 
 
 Elicitar não é um ato passivo de "colher" requisitos, mas um processo ativo de investigação e descoberta. Você deve atuar como um facilitador que remove barreiras de comunicação para extrair a verdade por trás das solicitações.
 
-passa para uma tabela em md: Fase	Objetivo Principal
-Preparação	Definir técnicas (entrevistas, workshops, observação), preparar materiais e alinhar expectativas com os stakeholders.
-Condução	Explorar e identificar as necessidades reais, garantindo que as informações de análise sejam compreendidas.
-Confirmação	Validar os resultados com os stakeholders para garantir que o que foi registrado reflete a realidade, sem distorções.
+| Fase | Objetivo Principal |
+| --- | --- |
+| Preparação | Definir técnicas (entrevistas, workshops, observação), preparar materiais e alinhar expectativas com os stakeholders. |
+| Condução | Explorar e identificar as necessidades reais, garantindo que as informações de análise sejam compreendidas. |
+| Confirmação | Validar os resultados com os stakeholders para garantir que o que foi registrado reflete a realidade, sem distorções. |
 
 Conexão Pedagógica: Uma vez que você extraiu essas informações preciosas, o próximo desafio é garantir que elas permaneçam organizadas e úteis durante todo o projeto.
 
