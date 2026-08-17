@@ -226,4 +226,5 @@ A análise de negócios é uma disciplina de pontes: entre o problema e a soluç
 
 ## Mapa mental 
 
-<img width="4423" height="10537" alt="NotebookLM Mind Map (1)" src="https://github.com/user-attachments/assets/26211bdb-8460-49ab-a406-911672fd4fda" />
+<img width="5181" height="7638" alt="NotebookLM Mind Map (2)" src="https://github.com/user-attachments/assets/9aed802f-9b73-4d56-8784-6283df8b4105" />
+
