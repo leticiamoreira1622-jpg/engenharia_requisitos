@@ -113,8 +113,8 @@ Apliquem a técnica aos requisitos levantados no projeto. Marquem apenas uma cat
 
 | ID | Requisito | M | S | C | W | Justificativa |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| **RF01** | | | | | | |
-| **RF02** | | | | | | |
+| **RF01** | Agendar consulta |X| | | | |
+| **RF02** | Cancelar consulta |X| | | | |
 | **RF03** | | | | | | |
 | **RF04** | | | | | | |
 | **RF05** | | | | | | |
