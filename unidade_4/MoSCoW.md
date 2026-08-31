@@ -113,14 +113,14 @@ Apliquem a técnica aos requisitos levantados no projeto. Marquem apenas uma cat
 
 | ID | Requisito | M | S | C | W | Justificativa |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| **RF01** | Agendar consulta |X| | | | |
-| **RF02** | Cancelar consulta |X| | | | |
-| **RF03** | Confirmar consulta | |X| | | |
-| **RF04** | Cadastrar o paciente |X| | | | |
-| **RF05** | Check-in do paciente | | |X| | |
-| **RF06** | Registrar atendimento | | |X| | |
-| **RF07** | Catalogar o serviço do paciente | | |X| | |
-| **RF08** | Armazenar relatório médico| |X| | | |
+| **RF01** | Agendar consulta |X| | | | O agendamento de consulta é necessário para o funcionamento do sistema da clínica.|
+| **RF02** | Cancelar consulta |X| | | | Em caso de cancelamento, é necessário para a reorganização da agenda da clínica. |
+| **RF03** | Confirmar consulta | |X| | | A confirmação é importante num sistema de clínica, mas pode ser feita manualmente, ainda que seja mais trabalhoso. |
+| **RF04** | Cadastrar o paciente |X| | | | O cadastro é necessário para qualquer consulta médica, o sistema deve cadastrar. |
+| **RF05** | Check-in do paciente | | |X| | O check-in facilita o trabalho repetitivo da recepção em caso de retorno, porém é possível refazer sempre o cadastro, por isso não é essencial.|
+| **RF06** | Registrar atendimento | | |X| | O registro de atendimento no sistema é necessário para confirmar a realização do atendimento, não é essencial por poder ser feito manualmente pelos médicos ou não realizado.|
+| **RF07** | Catalogar o serviço do paciente | | |X| | O catálogo é necessário para melhor distribuição de horário da agenda do médico, pode ser feito manualmente sem essa catalogação.|
+| **RF08** | Armazenar relatório médico| |X| | | O armazenamento sistemático dos prontuários é uma assistência, porém não é necessário num sistema, podendo ser realizado manualmente.|
 | **RQ01** | Avaliar atendimento do médico | | | |X| |
 | **RQ02** | Automatizar prontuários médicos | | | |X| |
 | **RQ03** | Reagendar automaticamente por ordem de prioridade | | |X| | |
