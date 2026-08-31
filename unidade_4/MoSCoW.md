@@ -109,6 +109,10 @@ Se todos os requisitos forem classificados como prioridade máxima, não existe 
 ---
 
 ### 11. Atividade do grupo - Matriz MoSCoW
+João Miguel Andrade, Daniel de Medeiros, Lucas Alves e Letícia Moreira de Oliveira.
+
+---
+
 Apliquem a técnica aos requisitos levantados no projeto. Marquem apenas uma categoria por requisito e registrem a justificativa.
 
 | ID | Requisito | M | S | C | W | Justificativa |
@@ -135,18 +139,18 @@ Apliquem a técnica aos requisitos levantados no projeto. Marquem apenas uma cat
 #### Parte A - Selecione 5 requisitos indispensáveis.
 | Ordem | ID | Requisito | Por que precisa permanecer? |
 | :---: | :--- | :--- | :--- |
-| **1** | | | |
-| **2** | | | |
-| **3** | | | |
-| **4** | | | |
-| **5** | | | |
+| **1** | RF01 | Agendar consulta | É o ponto de início do sistema, que se inicia a partir do agendamento. |
+| **2** | RF02 | Cancelar consulta | A hipótese de cancelamento de consulta é indispensável, pois rege a agenda da clínica diretamente. |
+| **3** | RF04 | Cadastrar o paciente | A coleta de dados do paciente é necessária para contato, armazenamento, segurança de quem atende e organização. |
+| **4** | RF03 | Confirmar consulta | A confirmação de consulta é necessária para o regimento da clínica.|
+| **5** | RF07 | Catalogar o serviço do paciente | O catálogo de especialidade é necessário para consultar a requisição de especialidade específica e suas porcentagem em relação ao total. |
 
 #### Parte B - Selecione 3 requisitos que podem ir para uma versão futura.
 | ID | Requisito | Impacto de adiar |
 | :--- | :--- | :--- |
-| | | |
-| | | |
-| | | |
+| RF05 | Check-in do paciente | Possível perda de dados e o trabalho de recadastro toda consulta. |
+| RF08 | Armazenar relatório médico | O médico armazenar por conta própria pode gerar superlotação de armazenamento e desorganização. |
+| RQ03 | Reagendar automaticamente por ordem de prioridade | O reagendamento manual pode ocasionar alta demanda aos funcionários da clínica e desordem na agenda.|
 
 ---
 
@@ -156,25 +160,37 @@ Observem os requisitos classificados como *Must Have* e respondam: com esses req
 ---
 
 ### 14. Checklist MoSCoW
-- [ ] Todos os requisitos possuem uma prioridade?
-- [ ] Cada requisito possui apenas uma classificação?
-- [ ] Os *Must* são realmente indispensáveis?
-- [ ] Existe justificativa para cada prioridade?
-- [ ] O grupo considerou valor para o negócio e necessidades dos stakeholders?
-- [ ] Foram analisadas dependências, riscos e obrigações?
-- [ ] Requisitos de qualidade também foram priorizados?
-- [ ] Existem requisitos classificados como *Could* ou *Won't*?
-- [ ] A equipe consegue explicar o impacto de retirar cada *Must*?
-- [ ] A primeira versão é viável considerando as restrições do projeto?
+- [X] Todos os requisitos possuem uma prioridade?
+- [X] Cada requisito possui apenas uma classificação?
+- [X] Os *Must* são realmente indispensáveis?
+- [X] Existe justificativa para cada prioridade?
+- [X] O grupo considerou valor para o negócio e necessidades dos stakeholders?
+- [X] Foram analisadas dependências, riscos e obrigações?
+- [X] Requisitos de qualidade também foram priorizados?
+- [X] Existem requisitos classificados como *Could* ou *Won't*?
+- [X] A equipe consegue explicar o impacto de retirar cada *Must*?
+- [X] A primeira versão é viável considerando as restrições do projeto?
 
 ---
 
 ### 15. Reflexão do grupo
 1. Qual requisito foi mais difícil de priorizar? Por quê?
+- O de catalogar os serviços do cliente, porque é um campo de variáveis diversas e altas complexidades, ainda que prioritário.
 2. Houve algum requisito inicialmente considerado *Must* que mudou de prioridade?
+- Não, mantemos todos.
 3. Qual requisito gerou maior divergência entre os integrantes?
+- O do catálogo de especialização, alguns integrantes não entenderam de primeira a importância do requisito de catalogação para a empresa da clínica.
 4. O que aconteceria se todos os requisitos fossem classificados como *Must*?
+- O projeto seria desorganizado, sem ordem de prioridade e, consequentemente, extremamente caro de se desenvolver e de se atualizar.
 5. Quais requisitos formariam a primeira versão do sistema?
+| Ordem | ID | Requisito | Por que precisa permanecer? |
+| :---: | :--- | :--- | :--- |
+| **1** | RF01 | Agendar consulta | É o ponto de início do sistema, que se inicia a partir do agendamento. |
+| **2** | RF02 | Cancelar consulta | A hipótese de cancelamento de consulta é indispensável, pois rege a agenda da clínica diretamente. |
+| **3** | RF04 | Cadastrar o paciente | A coleta de dados do paciente é necessária para contato, armazenamento, segurança de quem atende e organização. |
+| **4** | RF03 | Confirmar consulta | A confirmação de consulta é necessária para o regimento da clínica.|
+| **5** | RF07 | Catalogar o serviço do paciente | O catálogo de especialidade é necessário para consultar a requisição de especialidade específica e suas porcentagem em relação ao total. |
+
 
 ---
 
