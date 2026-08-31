@@ -115,12 +115,12 @@ Apliquem a técnica aos requisitos levantados no projeto. Marquem apenas uma cat
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
 | **RF01** | Agendar consulta |X| | | | |
 | **RF02** | Cancelar consulta |X| | | | |
-| **RF03** | | | | | | |
-| **RF04** | | | | | | |
-| **RF05** | | | | | | |
-| **RF06** | | | | | | |
-| **RF07** | | | | | | |
-| **RF08** | | | | | | |
+| **RF03** | Confirmar consulta | |X| | | |
+| **RF04** | Cadastrar o paciente |X| | | | |
+| **RF05** | Check-in do paciente | | | |X| |
+| **RF06** | Registrar atendimento | | |X| | |
+| **RF07** | Catalogar o serviço do paciente | | |X| | |
+| **RF08** | Armazenar relatório médico| |X| | | |
 | **RQ01** | | | | | | |
 | **RQ02** | | | | | | |
 | **RQ03** | | | | | | |
