@@ -117,15 +117,15 @@ Apliquem a técnica aos requisitos levantados no projeto. Marquem apenas uma cat
 | **RF02** | Cancelar consulta |X| | | | |
 | **RF03** | Confirmar consulta | |X| | | |
 | **RF04** | Cadastrar o paciente |X| | | | |
-| **RF05** | Check-in do paciente | | | |X| |
+| **RF05** | Check-in do paciente | | |X| | |
 | **RF06** | Registrar atendimento | | |X| | |
 | **RF07** | Catalogar o serviço do paciente | | |X| | |
 | **RF08** | Armazenar relatório médico| |X| | | |
-| **RQ01** | | | | | | |
-| **RQ02** | | | | | | |
-| **RQ03** | | | | | | |
-| **RQ04** | | | | | | |
-| **RQ05** | | | | | | |
+| **RQ01** | Avaliar atendimento do médico | | | |X| |
+| **RQ02** | Automatizar prontuários médicos | | | |X| |
+| **RQ03** | Reagendar automaticamente por ordem de prioridade | | |X| | |
+| **RQ04** | Enviar o prontuário ao paciente | | |X| | |
+| **RQ05** | Realocar horários de pacientes atrasados após a tolerância| | | |X| |
 
 ---
 
