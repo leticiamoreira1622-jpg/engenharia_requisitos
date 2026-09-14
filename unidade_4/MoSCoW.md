@@ -117,19 +117,20 @@ Apliquem a técnica aos requisitos levantados no projeto. Marquem apenas uma cat
 
 | ID | Requisito | M | S | C | W | Justificativa |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| **RF01** | Agendar consulta |X| | | | O agendamento de consulta é necessário para o funcionamento do sistema da clínica.|
-| **RF02** | Cancelar consulta |X| | | | Em caso de cancelamento, é necessário para a reorganização da agenda da clínica. |
-| **RF03** | Confirmar consulta | |X| | | A confirmação é importante num sistema de clínica, mas pode ser feita manualmente, ainda que seja mais trabalhoso. |
-| **RF04** | Cadastrar o paciente |X| | | | O cadastro é necessário para qualquer consulta médica, o sistema deve cadastrar. |
-| **RF05** | Check-in do paciente | | |X| | O check-in facilita o trabalho repetitivo da recepção em caso de retorno, porém é possível refazer sempre o cadastro, por isso não é essencial.|
-| **RF06** | Registrar atendimento | | |X| | O registro de atendimento no sistema é necessário para confirmar a realização do atendimento, não é essencial por poder ser feito manualmente pelos médicos ou não realizado.|
-| **RF07** | Catalogar o serviço do paciente | | |X| | O catálogo é necessário para melhor distribuição de horário da agenda do médico, pode ser feito manualmente sem essa catalogação.|
-| **RF08** | Armazenar relatório médico| |X| | | O armazenamento sistemático dos prontuários é uma assistência, porém não é necessário num sistema, podendo ser realizado manualmente.|
-| **RQ01** | Avaliar atendimento do médico | | | |X| A avaliação do atendimento médico é importante para garantir a qualidade do atendimento, porém não é essencial para o funcionamento da clínica.|
-| **RQ02** | Automatizar prontuários médicos | | | |X| A automatização dos prontuários é um facilitador para o funcionamento, mas não é essencial.|
-| **RQ03** | Reagendar automaticamente por ordem de prioridade | | |X| | O reagendamento prioritário é importante para o retorno de pacientes, mas pode ser feito de forma manual.|
-| **RQ04** | Enviar o prontuário ao paciente | | |X| | O envio do prontuário é bom, mas não é necessário para a consulta e pode ser feito manualmente pelo médico.|
-| **RQ05** | Realocar horários de pacientes atrasados após a tolerância| | | |X| A realocação de horário é essencial, porém pode ser feita após o dia de consulta e não necessariamente logo após a tolerância, ainda que facilite as coisas.|
+| **RQ01** | Métodos de pagamento aceitos |X| | | | O método de pagamento é necessário para o início do negócio. |
+| **RF02** | Cadastrar o paciente |X| | | | O cadastro é necessário para qualquer consulta médica, o sistema deve cadastrar. |
+| **RF03** | Agendar consulta |X| | | | O agendamento de consulta é necessário para o funcionamento do sistema da clínica.|
+| **RF04** | Cancelar consulta |X| | | | Em caso de cancelamento, é necessário para a reorganização da agenda da clínica. |
+| **RF05** | Catalogar o serviço do paciente | | |X| | O catálogo é necessário para melhor distribuição de horário da agenda do médico, pode ser feito manualmente sem essa catalogação.|
+| **RF06** | Confirmar consulta | |X| | | A confirmação é importante num sistema de clínica, mas pode ser feita manualmente, ainda que seja mais trabalhoso. |
+| **RF07** | Check-in do paciente | | |X| | O check-in facilita o trabalho repetitivo da recepção em caso de retorno, porém é possível refazer sempre o cadastro, por isso não é essencial.|
+| **RQ08** | Realocar horários de pacientes atrasados após a tolerância| | | |X| A realocação de horário é essencial, porém pode ser feita após o dia de consulta e não necessariamente logo após a tolerância, ainda que facilite as coisas.|
+| **RQ09** | Automatizar prontuários médicos | | | |X| A automatização dos prontuários é um facilitador para o funcionamento, mas não é essencial.|
+| **RF10** | Registrar atendimento | | |X| | O registro de atendimento no sistema é necessário para confirmar a realização do atendimento, não é essencial por poder ser feito manualmente pelos médicos ou não realizado.|
+| **RF11** | Armazenar relatório médico| |X| | | O armazenamento sistemático dos prontuários é uma assistência, porém não é necessário num sistema, podendo ser realizado manualmente.|
+| **RQ12** | Reagendar automaticamente por ordem de prioridade | | |X| | O reagendamento prioritário é importante para o retorno de pacientes, mas pode ser feito de forma manual.|
+| **RQ13** | Enviar o prontuário ao paciente | | |X| | O envio do prontuário é bom, mas não é necessário para a consulta e pode ser feito manualmente pelo médico.|
+| **RQ14** | Avaliar atendimento do médico | | | |X| A avaliação do atendimento médico é importante para garantir a qualidade do atendimento, porém não é essencial para o funcionamento da clínica.|
 
 ---
 
