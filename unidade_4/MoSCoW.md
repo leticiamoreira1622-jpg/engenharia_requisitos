@@ -122,7 +122,7 @@ Apliquem a técnica aos requisitos levantados no projeto. Marquem apenas uma cat
 | **RF03** | Agendar consulta |X| | | | O agendamento de consulta é necessário para o funcionamento do sistema da clínica.|
 | **RF04** | Catalogar o serviço do paciente |X | || | O catálogo é necessário para melhor distribuição de horário da agenda do médico, pode ser feito manualmente sem essa catalogação.|
 | **RF05** | Cancelar consulta |X| | | | Em caso de cancelamento, é necessário para a reorganização da agenda da clínica. |
-| **RF06** | Confirmar consulta | |X| | | A confirmação é importante num sistema de clínica, mas pode ser feita manualmente, ainda que seja mais trabalhoso. |
+| **RF06** | Confirmar consulta |X| | | | A confirmação é importante num sistema de clínica, mas pode ser feita manualmente, ainda que seja mais trabalhoso. |
 | **RF07** | Check-in do paciente | | |X| | O check-in facilita o trabalho repetitivo da recepção em caso de retorno, porém é possível refazer sempre o cadastro, por isso não é essencial.|
 | **RQ08** | Realocar horários de pacientes atrasados após a tolerância| | | |X| A realocação de horário é essencial, porém pode ser feita após o dia de consulta e não necessariamente logo após a tolerância, ainda que facilite as coisas.|
 | **RQ09** | Automatizar prontuários médicos | | | |X| A automatização dos prontuários é um facilitador para o funcionamento, mas não é essencial.|
