@@ -236,6 +236,7 @@ HTML
 
 
 CSS 
+
 /* Esconder barras de rolagem padrão */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
