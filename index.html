@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOTICKET - Plataforma de Eventos</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Ícones Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col font-sans bg-[#0f172a] text-slate-200 select-none">
+
+  <!-- ================= CABEÇALHO ================= -->
+  <header class="bg-slate-900/80 backdrop-blur-md text-white p-4 flex justify-between items-center px-8 border-b border-slate-800 sticky top-0 z-40">
+    <div class="text-2xl font-black tracking-tighter bg-gradient-to-r from-violet-500 to-pink-500 bg-clip-text text-transparent italic">
+      GO<span class="text-white">TICKET</span>
+    </div>
+    
+    <div class="flex items-center gap-4">
+      <!-- Botão do Carrinho com Contador -->
+      <button id="btn-open-cart" class="relative bg-slate-800 p-2.5 rounded-full hover:bg-violet-500/20 transition-all flex items-center justify-center">
+        <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+        <span id="cart-counter" class="absolute -top-1 -right-1 bg-violet-600 text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow-lg hidden">0</span>
+      </button>
+
+      <!-- Botão de Conta / Entrar -->
+      <div id="btn-open-auth" class="flex items-center gap-2 cursor-pointer group">
+        <div class="bg-slate-800 p-2 rounded-full group-hover:bg-violet-500/20 transition-all">
+          <i data-lucide="user" class="w-5 h-5"></i>
+        </div>
+        <span class="text-sm font-bold hidden sm:block">Entrar / Registar</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+  <main class="flex-1 p-6 lg:p-10 flex flex-col max-w-7xl mx-auto w-full overflow-hidden">
+    
+    <!-- Barra de Pesquisa -->
+    <section class="max-w-2xl mb-12 mx-auto w-full">
+      <div class="relative flex items-center group">
+        <i data-lucide="search" class="absolute left-6 text-slate-500 group-focus-within:text-violet-400 transition-colors w-6 h-6"></i>
+        <input 
+          id="search-input"
+          type="text" 
+          placeholder="Pesquise por nome do evento ou categoria..." 
+          class="w-full bg-slate-900/50 border border-slate-800 rounded-3xl py-6 pl-16 pr-8 text-white placeholder-slate-600 shadow-2xl focus:ring-2 focus:ring-violet-500/50 outline-none transition-all backdrop-blur-sm"
+        />
+      </div>
+    </section>
+
+    <!-- 1º CARROSSEL: EVENTOS PRINCIPAIS -->
+    <section>
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-3xl font-black text-white flex items-center gap-4 italic tracking-tight uppercase">
+          <i data-lucide="zap" class="text-violet-500 fill-violet-500 w-7 h-7"></i>
+          Eventos Principais
+        </h2>
+        <div class="flex gap-3">
+          <button id="btn-prev" class="bg-slate-800/80 p-3 rounded-2xl hover:bg-slate-700 transition-all disabled:opacity-20">
+            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+          </button>
+          <button id="btn-next" class="bg-slate-800/80 p-3 rounded-2xl hover:bg-slate-700 transition-all disabled:opacity-20">
+            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="relative mb-12">
+        <div id="events-carousel" class="flex gap-8 overflow-x-auto scroll-smooth no-scrollbar pb-8 snap-x snap-mandatory"></div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DE CATEGORIAS DESLIZANTES -->
+    <section class="mt-8 mb-16 relative">
+      <div class="flex items-center gap-6 mb-10 px-2">
+        <button id="btn-toggle-categories" class="flex items-center gap-4 px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-[0.2em] transition-all border animate-glow bg-violet-600 border-violet-400 text-white shadow-[0_0_20px_rgba(139,92,246,0.5)]">
+          <span>Navegar por Categoria</span>
+          <i id="toggle-icon" data-lucide="chevron-up" class="w-5 h-5"></i>
+        </button>
+        
+        <div id="drag-hint" class="flex items-center gap-3">
+          <span class="text-[10px] font-black text-slate-600 uppercase tracking-[0.3em] animate-pulse">Arraste para o lado</span>
+          <div class="w-12 h-[1px] bg-slate-800"></div>
+        </div>
+      </div>
+
+      <div id="categories-wrapper" class="relative transition-all duration-500">
+        <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#0f172a] to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#0f172a] to-transparent z-10 pointer-events-none"></div>
+
+        <div id="categories-container" class="scroll-container no-scrollbar cursor-grab"></div>
+        
+        <div class="flex justify-center mt-6">
+          <div class="w-64 h-1.5 bg-slate-900 rounded-full overflow-hidden border border-slate-800/50">
+            <div class="h-full bg-violet-600 w-1/4 animate-pulse shadow-[0_0_15px_#8b5cf6]"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: EM ALTA NA SEMANA (3 CARROSSÉIS EMPILHADOS) -->
+    <section class="mt-4 mb-16 space-y-10">
+      
+      <!-- Cabeçalho + Fileira 1 de Em Alta -->
+      <div>
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-3xl font-black text-white flex items-center gap-4 italic tracking-tight uppercase">
+            <i data-lucide="flame" class="text-pink-500 fill-pink-500 w-7 h-7"></i>
+            Em Alta na Semana
+          </h2>
+          <div class="flex gap-3">
+            <button id="btn-prev-secondary" class="bg-slate-800/80 p-3 rounded-2xl hover:bg-slate-700 transition-all disabled:opacity-20">
+              <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <button id="btn-next-secondary" class="bg-slate-800/80 p-3 rounded-2xl hover:bg-slate-700 transition-all disabled:opacity-20">
+              <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div id="secondary-events-carousel" class="flex gap-8 overflow-x-auto scroll-smooth no-scrollbar pb-4 snap-x snap-mandatory"></div>
+        </div>
+      </div>
+
+      <!-- Fileira 2 de Em Alta -->
+      <div>
+        <div class="flex items-center justify-between mb-6">
+          <span class="text-xs font-black text-slate-500 uppercase tracking-[0.3em] ml-2">Mais Procurados</span>
+          <div class="flex gap-3">
+            <button id="btn-prev-tertiary" class="bg-slate-800/80 p-3 rounded-2xl hover:bg-slate-700 transition-all disabled:opacity-20">
+              <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <button id="btn-next-tertiary" class="bg-slate-800/80 p-3 rounded-2xl hover:bg-slate-700 transition-all disabled:opacity-20">
+              <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div id="tertiary-events-carousel" class="flex gap-8 overflow-x-auto scroll-smooth no-scrollbar pb-4 snap-x snap-mandatory"></div>
+        </div>
+      </div>
+
+      <!-- Fileira 3 de Em Alta -->
+      <div>
+        <div class="flex items-center justify-between mb-6">
+          <span class="text-xs font-black text-slate-500 uppercase tracking-[0.3em] ml-2">Últimos Bilhetes</span>
+          <div class="flex gap-3">
+            <button id="btn-prev-quaternary" class="bg-slate-800/80 p-3 rounded-2xl hover:bg-slate-700 transition-all disabled:opacity-20">
+              <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <button id="btn-next-quaternary" class="bg-slate-800/80 p-3 rounded-2xl hover:bg-slate-700 transition-all disabled:opacity-20">
+              <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div id="quaternary-events-carousel" class="flex gap-8 overflow-x-auto scroll-smooth no-scrollbar pb-8 snap-x snap-mandatory"></div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= MODAL CENTRAL (DETALHES / LOGIN) ================= -->
+  <div id="modal-overlay" class="fixed inset-0 bg-slate-950/95 backdrop-blur-3xl hidden items-center justify-center z-50 p-4 sm:p-6">
+    <div class="bg-slate-900 rounded-[2.5rem] sm:rounded-[3.5rem] w-full max-w-xl p-0 relative shadow-[0_0_100px_rgba(0,0,0,0.5)] border border-slate-800/80 overflow-hidden max-h-[95vh] overflow-y-auto no-scrollbar">
+      <button id="btn-close-modal" class="absolute top-6 right-6 sm:top-8 sm:right-8 text-slate-400 hover:text-white p-3 z-20 bg-slate-950/50 rounded-full transition-all border border-white/5">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- ================= PAINEL LATERAL DO CARRINHO (DRAWER) ================= -->
+  <div id="cart-drawer-overlay" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md hidden z-50 transition-opacity">
+    <div id="cart-drawer" class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-slate-900 border-l border-slate-800 p-6 sm:p-8 flex flex-col shadow-2xl transform translate-x-full transition-transform duration-300">
+      
+      <!-- Cabeçalho do Carrinho -->
+      <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <i data-lucide="shopping-cart" class="text-violet-500 w-6 h-6"></i>
+          <h2 class="text-xl font-black text-white italic uppercase tracking-wider">Seu Carrinho</h2>
+        </div>
+        <button id="btn-close-cart" class="text-slate-400 hover:text-white p-2 rounded-full bg-slate-950/50 border border-white/5">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Lista de Itens no Carrinho -->
+      <div id="cart-items-container" class="flex-1 overflow-y-auto py-6 space-y-4 no-scrollbar"></div>
+
+      <!-- Rodapé do Carrinho -->
+      <div class="border-t border-slate-800 pt-6 space-y-4">
+        <div class="flex justify-between items-center">
+          <span class="text-slate-400 text-xs font-bold uppercase tracking-widest">Total Geral:</span>
+          <span id="cart-total" class="text-2xl font-black text-white">€ 0,00</span>
+        </div>
+        <button onclick="checkoutCart()" class="w-full bg-violet-600 text-white py-4 rounded-2xl font-black text-xs uppercase tracking-[0.25em] hover:bg-violet-500 transition-all shadow-xl active:scale-[0.98]">
+          Finalizar Reserva
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="py-20 bg-slate-950 flex flex-col items-center justify-center border-t border-slate-900 mt-auto">
+    <div class="text-4xl font-black bg-gradient-to-r from-violet-500 via-pink-500 to-violet-500 bg-clip-text text-transparent opacity-20 italic tracking-tighter mb-6 uppercase">
+      Go Ticket
+    </div>
+    <div class="flex gap-10 mb-8 opacity-40">
+      <span class="text-[10px] font-black uppercase tracking-widest cursor-pointer hover:text-white transition-colors">Termos</span>
+      <span class="text-[10px] font-black uppercase tracking-widest cursor-pointer hover:text-white transition-colors">Privacidade</span>
+      <span class="text-[10px] font-black uppercase tracking-widest cursor-pointer hover:text-white transition-colors">Apoio</span>
+      <span class="text-[10px] font-black uppercase tracking-widest cursor-pointer hover:text-white transition-colors">Blog</span>
+    </div>
+    <p class="text-[9px] text-slate-800 font-bold uppercase tracking-[0.6em]">© 2026 feito por João Miguel | Leticia Moreira | Daniel de Medeiros | Lucas Oliveira</p>
+  </footer>
+
+  <!-- Script Principal -->
+  <script src="script.js"></script>
+</body>
+</html>

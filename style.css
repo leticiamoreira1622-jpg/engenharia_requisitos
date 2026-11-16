@@ -1,0 +1,70 @@
+/* Esconder barras de rolagem padrão */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Animação de brilho (Glow) */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.4), 0 0 20px rgba(139, 92, 246, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.7), 0 0 45px rgba(139, 92, 246, 0.4);
+  }
+}
+
+.animate-glow {
+  animation: glow 3s infinite ease-in-out;
+}
+
+/* Container de rolagem horizontal das categorias */
+.scroll-container {
+  display: flex;
+  gap: 2.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 2rem 2.5rem 2rem;
+}
+
+.category-item {
+  scroll-snap-align: center;
+  flex-shrink: 0;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.category-item:hover {
+  transform: translateY(-8px) scale(1.1);
+}
+
+.category-circle {
+  transition: all 0.4s ease;
+  border: 2px solid rgba(30, 41, 59, 1);
+}
+
+.category-item:hover .category-circle {
+  border-color: #8b5cf6;
+  color: #8b5cf6;
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.5), inset 0 0 15px rgba(139, 92, 246, 0.2);
+}
+
+.category-label {
+  transition: color 0.3s ease;
+}
+
+.category-item:hover .category-label {
+  color: #8b5cf6;
+}
+
+.social-btn {
+  transition: all 0.3s ease;
+}
+.social-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.2);
+}
